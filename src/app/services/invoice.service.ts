@@ -12,6 +12,12 @@ export class InvoiceService {
   constructor() { }
 
   getInvoice(): Invoice {
-    return this.invoice
+    const total = this.calculateTotal()
+    return {... this.invoice, total}
   }
+
+  calculateTotal() {
+    return this.invoice.items.reduce((total, item) => total + (item.price * item.quantity), 0)
+  }
+
 }
