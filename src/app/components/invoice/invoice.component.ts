@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { InvoiceService } from '../../services/invoice.service';
 import { Invoice } from '../../models/invoice';
 import { InvoiceViewComponent } from '../invoice-view/invoice-view.component';
@@ -27,6 +27,10 @@ export class InvoiceComponent implements OnInit{
 
   ngOnInit(): void {
     this.invoice = this.service.getInvoice()
+  }
+
+  removeItem(id: number): void {
+    this.invoice.items = this.invoice.items.filter(item => item.id != id)
   }
 
 }
