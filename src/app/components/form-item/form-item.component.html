@@ -1,4 +1,4 @@
-<form>
+<form (ngSubmit)="onSubmit()">
     <label for="product">Product:</label>
     <input type="text" name="product" autocomplete="off" placeholder="Name" class="form-control m-3"
         [(ngModel)]="item.product">
