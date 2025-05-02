@@ -1,0 +1,12 @@
+<form>
+    <label for="product">Product:</label>
+    <input type="text" name="product" autocomplete="off" placeholder="Name" class="form-control m-3"
+        [(ngModel)]="item.product">
+    <label for="price">Price:</label>
+    <input type="text" name="price" autocomplete="off" placeholder="Price" class="form-control m-3"
+        [(ngModel)]="item.price">
+    <label for="quantity">Quantity:</label>
+    <input type="text" name="quantity" autocomplete="off" placeholder="Quantity" class="form-control m-3"
+        [(ngModel)]="item.quantity">
+    <button class="btn btn-success m-3">New Item</button>
+</form>
