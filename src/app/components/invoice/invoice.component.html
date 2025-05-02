@@ -16,7 +16,7 @@
             <app-list-items [items]="invoice.items" (removeEventEmitter)="removeItem($event)" />
             <app-total [total]="invoice.total" />
             <div class="row">
-                <div class="col-6 d-flex justify-content-center m-auto border rounded shadow p-5 bg-dark text-white">
+                <div class="col-6 justify-content-center p-5">
                     <app-form-item (addItemEventEmitter)="addItem($event)"/>
                 </div>
             </div>
